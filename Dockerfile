@@ -3,11 +3,11 @@ FROM mback2k/ubuntu:rolling
 MAINTAINER Marc Hoersken "info@marc-hoersken.de"
 
 RUN apt-get update && \
-    apt-get install -y \
+    apt-get install -y --no-install-recommends \
         sane sane-utils libsane libsane-extras libsane-hpaio \
         dbus cups cups-bsd cups-client libcups2 \
         hplip hpijs-ppds printer-driver-gutenprint \
-        locales supervisor && \
+        snmp-mibs-downloader locales supervisor && \
     apt-get clean
 
 RUN locale-gen en_US en_US.UTF-8 && dpkg-reconfigure locales
