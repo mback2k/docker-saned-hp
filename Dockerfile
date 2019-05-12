@@ -1,4 +1,4 @@
-FROM mback2k/ubuntu:rolling
+FROM mback2k/ubuntu:bionic
 
 MAINTAINER Marc Hoersken "info@marc-hoersken.de"
 
